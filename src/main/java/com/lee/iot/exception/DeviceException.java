@@ -20,6 +20,12 @@ public class DeviceException extends RuntimeException
         this.errorMsg = errorMsg;
     }
 
+    public DeviceException(BusinessCode code) {
+        this.returnStatus = code.getRespStatus();
+        this.errorCode = code.getCode();
+        this.errorMsg = code.getMessage();
+    }
+
 
     public DeviceException(String errorCode, String errorMsg) {
         this(HttpStatus.OK, errorCode, errorMsg);

@@ -1,9 +1,11 @@
 package com.lee.iot.controller.device.shadow.req;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.Map;
+import java.util.List;
 
 @Data
 public class DeviceShadowDesireReq implements Serializable {
@@ -11,16 +13,39 @@ public class DeviceShadowDesireReq implements Serializable {
     /**
      * 设备编码
      */
-    private String deviceCode;
+    private String deviceKey;
 
     /**
-     * 期待版本
+     * 期待属性
      */
-    private Long desireVersion;
+    private List<DesireValue> values;
 
-    /**
-     * 写入参数
-     */
-    private Map<String, Object> params;
+
+    @Data
+    @Builder
+    @ToString
+    static class DesireValue {
+
+        /**
+         * 期望版本
+         */
+        private Long desireVersion;
+
+        /**
+         * 当前属性版本
+         */
+        private Long expectedVersion;
+
+        /**
+         * 属性名称
+         */
+        private String property;
+
+        /**
+         * 期待值
+         */
+        private Object desireValue;
+
+    }
 
 }
