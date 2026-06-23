@@ -32,6 +32,9 @@ import java.util.UUID;
 public class DeviceShadowPropertyEntity {
 
 
+    @Column(name = "tenant_id", nullable = false)
+    private Long tenantId;
+
     @Id
     @Column(name = "device_id", nullable = false)
     private Long deviceId;

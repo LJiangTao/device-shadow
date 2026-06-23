@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: device-shadow
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred

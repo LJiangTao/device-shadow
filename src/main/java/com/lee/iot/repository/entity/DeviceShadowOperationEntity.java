@@ -6,11 +6,13 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.type.SqlTypes;
-import org.springframework.data.annotation.Id;
 
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.UUID;
+
+import com.lee.iot.repository.enums.device.ShadowOperationStatus;
+import com.lee.iot.repository.enums.device.ShadowOperationType;
 
 @Getter
 @Setter

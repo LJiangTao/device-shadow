@@ -24,7 +24,7 @@ public class DeviceShadowDesireReq implements Serializable {
     @Data
     @Builder
     @ToString
-    static class DesireValue {
+    public static class DesireValue {
 
         /**
          * 期望版本

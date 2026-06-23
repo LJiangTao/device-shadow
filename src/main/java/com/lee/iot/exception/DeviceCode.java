@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 public enum DeviceCode implements BusinessCode {
 
     DEVICE_NOT_EXISTS("device-not-exists", "device.not.exists"),
+    DEVICE_SHADOW_INVALID_REQUEST("device-shadow-invalid-request", "device.shadow.invalid.request"),
+    DEVICE_SHADOW_VERSION_CONFLICT("device-shadow-version-conflict", "device.shadow.version.conflict"),
 
 
     ;
