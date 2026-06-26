@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: device-shadow
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
+
+socket:
+  server:
+    host: 0.0.0.0
+    port: 8081
+    socket-io-port: 8082
+    websocket-path: /ws
+    socket-io-path: /socket.io
+  mqtt:
+    enabled: true
+    broker-url: tcp://localhost:1883
+    client-id: device-shadow-socket
